@@ -4,6 +4,7 @@ public class Car extends Vehicle {
 	
 	protected int vehicleId;
 	protected String driveType;
+	protected String vehicleType = "car";
 	
 	public Car(
 			String make, 
