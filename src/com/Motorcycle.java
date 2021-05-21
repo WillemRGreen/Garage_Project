@@ -2,34 +2,24 @@ package com;
 
 public class Motorcycle extends Vehicle {
 	
-	protected int vehicleId;
 	protected String engineType;
-	protected String vehicleType = "motorcycle";
 	
 	public Motorcycle(
+			int Id,
 			String make, 
 			String model, 
 			int miles, 
 			Boolean running, 
 			int year, 
+			String vehicleType,
 			int vehicleID, 
 			String engineType) 
 	{
 		
-				super(make, model, miles, running, year);
-				setId(vehicleId);
+				super(Id, make, model, miles, running, year, vehicleType);
 				setEngineType(engineType);
 				
 				
-	}
-	
-	public int getId() {
-		return vehicleId;
-		
-	}
-	
-	public void setId(int Id) {
-		this.vehicleId = Id;
 	}
 	
 	public String getEngineType() {

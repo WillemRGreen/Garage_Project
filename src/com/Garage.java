@@ -16,17 +16,15 @@ public class Garage {
 		
 		int totalBill = 0;
 		for(int i = 0; i < vehicleList.size(); i++) {
-			if(vehicleList.get(i).vehicleType.equals("bicycle")){
+			if(Vehicle.getVehicleType().equals("bicycle")){
 				totalBill += 500;
-			} else if(vehicleList.get(i).vehicleType.equals("motorcycle")) {
+			} else if(Vehicle.getVehicleType().equals("motorcycle")) {
 				totalBill += 5000;
-			} else if(vehicleList.get(i).vehicleType.equals("car")) {
+			} else if(Vehicle.getVehicleType().equals("car")) {
 				totalBill += 10000;
 			}
 		}
-		
 		return totalBill;
-		
 	}
 	
 	public void addVehicle(Object vehicle) {
@@ -36,8 +34,7 @@ public class Garage {
 	
 	public void removeVehicle(int vehicleId) {
 		for(int i = 0; i < vehicleList.size(); i++) {
-			Object vehicle = vehicleList.get(i);
-			if(vehicle.vehicleId.equals(vehicleId)) {
+			if(Vehicle.getId() == vehicleId) {
 				vehicleList.remove(i);
 			}
 		}
